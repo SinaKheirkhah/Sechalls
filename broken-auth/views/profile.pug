@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.profile
+  script(src='/js/p.js')
+
+  p Welcome
+    div.display_name
+    input(type='hidden', name='user_id', value=`${data.id}`)
+    if data.id == 47
+      p You are logged as administrator, flag: OFFSEC_{5a5058cba5c29fcd9b77f05fb520f289}
+    else
+      p You are NOT administrator
+
+
+
+  a(href='/logout') Logout

@@ -1,0 +1,23 @@
+{
+  "credentials": [
+    {
+      "id": "47",
+      "display_name": "Website's Administrator",
+      "user": "administrador",
+      "pass": "ce5f2ce89fa4b39778404b3a7a9dc13b"
+    },
+    {
+      "id": "2",
+      "display_name": "Yashar Shahinzadeh",
+      "user": "yasho",
+      "pass": "fcea920f7412b5da7be0cf42b8c93759"
+    },
+    {
+      "id": "3",
+      "display_name": "Normal User",
+      "user": "normal_user",
+      "pass": "ed97fd1ce7bb5ce78e8c81cd67f00268"
+    }
+  ],
+  "config": [{"hmac_key": "dddf24b2a3f560f3d5ce805b80492e62"}]
+}

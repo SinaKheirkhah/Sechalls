@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .page
+      main#main-doc.main-content
+        section#Introduction.main-section
+          header
+            h2
+              | Introduction
+          article
+            p
+              | Welcome to the website, enjoy browsing :)
+            if id
+               a(href='/profile') See your profile
+            else
+              a(href='/login') Please login

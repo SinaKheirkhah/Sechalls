@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .login-page
+    .form
+        form.login-form(action='/login', method='post')
+            if login_name
+                input(type='text', name='username', placeholder='username', value=`${login_name}`)
+            else
+                input(type='text', name='username', placeholder='username', value='')
+            input(type='password', name='password', placeholder='password', value='')
+            input(type='submit', value='Submit')
+            p.message Keep me logged-in
+            input(type='checkbox', name='remember', value='true')

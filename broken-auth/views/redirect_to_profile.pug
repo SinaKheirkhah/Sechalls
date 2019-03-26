@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    input(type='hidden', name='0', value=`${cookie_data.remember}`)
+    input(type='hidden', name='1', value=`${cookie_data.key}`)
+    input(type='hidden', name='2', value=`${cookie_data.expires}`)
+    input(type='hidden', name='3', value=`${cookie_data.user}`)
+    script(src='/js/s.js')
+    div.profile
+    p Wait while you are being redirected to the panel...
+    meta(http-equiv='refresh', content="1; URL='/profile'")
+    
