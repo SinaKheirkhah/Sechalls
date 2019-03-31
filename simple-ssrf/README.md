@@ -12,5 +12,5 @@ npm init
 ```
 ## Solution:
 ```
-http://ip:5050/proxy/internal_website/..%2fprivate%2fprivate_note
+??
 ```
