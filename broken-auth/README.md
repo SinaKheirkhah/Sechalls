@@ -1,4 +1,4 @@
-# Simple SSRF
+# Broken Authentication
 Difficulty: 3/10
 
 ## Description
