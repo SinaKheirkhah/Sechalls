@@ -50,7 +50,7 @@ app.get('/level1/', (req, res) => {
 app.get('/level2/', (req, res) => {
     url = req.query.url;
     
-    if (url.match(/http(s)?\:\/\/(www\.)?open-door.local/i) !== null){
+    if (url.match(/^http(s)?\:\/\/(www\.)?open-door.local/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
@@ -59,7 +59,11 @@ app.get('/level2/', (req, res) => {
 
 app.get('/level3/', (req, res) => {
     url = req.query.url;
-    
+
+    if (url.indexOf('..') >= 0) {
+    	res.end('Security failed');
+    }
+
     if (url.match(/http(s)?\:\/\/(www\.)?open-door.local(\/.*)?/i) !== null){
         res.redirect(url);
     }else{
@@ -70,8 +74,12 @@ app.get('/level3/', (req, res) => {
 
 app.get('/level4/', (req, res) => {
     url = req.query.url;
+
+    if (url.indexOf('..') >= 0) {
+    	res.end('Security failed');
+    }
     
-    if (url.match(/http(s)?\:\/\/(www\.)?open-door.local\/(.*)?/i) !== null){
+    if (url.match(/^http(s)?\:\/\/(www\.)?open-door.local\/(.*)?$/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
@@ -81,8 +89,12 @@ app.get('/level4/', (req, res) => {
 
 app.get('/level5/', (req, res) => {
     url = req.query.url;
+
+    if (url.indexOf('level') >= 0) {
+    	res.end('Security failed');
+    }
     
-    if (url.match(/http(s)?\:\/\/(www\.)?.*open-door.local\/(.*)?/i) !== null){
+    if (url.match(/^http(s)?\:\/\/(www\.)?.*open-door.local\/(.*)?$/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
@@ -92,7 +104,11 @@ app.get('/level5/', (req, res) => {
 app.get('/level6/', (req, res) => {
     url = req.query.url;
     
-    if (url.match(/http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/(.*)?/i) !== null){
+    if (url.indexOf('level') >= 0) {
+    	res.end('Security failed');
+    }
+
+    if (url.match(/^http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/(.*)?$/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
@@ -102,7 +118,7 @@ app.get('/level6/', (req, res) => {
 app.get('/level7/', (req, res) => {
     url = req.query.url;
     
-    if (url.match(/http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/hi\/(.*)?/i) !== null){
+    if (url.match(/^http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/hi\/(.*)?$/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
@@ -112,7 +128,7 @@ app.get('/level7/', (req, res) => {
 app.get('/level8/', (req, res) => {
     url = req.query.url;
     
-    if (url.match(/http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/hi\/([A-Za-z0-9\.\\\%\?\=\#]+)?$/i) !== null){
+    if (url.match(/^http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/hi\/([A-Za-z0-9\.\\\%\?\=\#]+)?$/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
@@ -122,7 +138,7 @@ app.get('/level8/', (req, res) => {
 app.get('/level9/', (req, res) => {
     url = req.query.url;
     
-    if (url.match(/http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/hi\/([A-Za-z0-9\\\%\?\=\#]+)?$/i) !== null){
+    if (url.match(/^http(s)?\:\/\/(www\.)?(.*\.)?open-door.local\/hi\/([A-Za-z0-9\\\%\?\=\#]+)?$/i) !== null){
         res.redirect(url);
     }else{
         res.end('Security failed.');
