@@ -13,7 +13,7 @@ server.use(body_parser.urlencoded({
 server.listen(5050)
 
 server.get('/', function (request, result) {
-    result.send('<html><a href="/proxy/internal_website/public_notel">Internal File</a></html>')
+    result.send('<html><a href="/proxy/internal_website/public_note">Internal File</a></html>')
     result.end()
 })
 
