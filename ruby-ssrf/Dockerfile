@@ -1,5 +1,7 @@
 FROM ruby:latest
 
+RUN useradd -s /bin/bash rubyapp
+
 RUN apt-get update -qq && apt-get install -y build-essential
 
 ENV APP_HOME /app
@@ -12,8 +14,6 @@ COPY . $APP_HOME
 ENV RACK_ENV production
 
 EXPOSE 4567
-
-RUN useradd -u 8877 ruby-www
-USER ruby-www
+USER rubyapp
 
 CMD ["ruby", "app.rb"]
