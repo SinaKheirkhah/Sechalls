@@ -16,4 +16,4 @@ ENV RACK_ENV production
 EXPOSE 4567
 USER rubyapp
 
-CMD ["ruby", "app.rb"]
+CMD ["ruby", "app2.rb"]

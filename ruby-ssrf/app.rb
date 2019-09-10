@@ -9,8 +9,7 @@ get '/page/' do
   if (params[:url] =~ /\|/)
     "Security failed"
   else
-    $url = open(params[:url]).read
-    format 'RESPONSE: %s', $url.gsub('|', '')
+    format 'RESPONSE: %s', open(params[:url]).read
   end
 end
 
