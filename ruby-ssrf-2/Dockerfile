@@ -11,9 +11,9 @@ RUN gem install sinatra-contrib
 COPY . $APP_HOME
 ENV RACK_ENV production
 
-EXPOSE 8081
+EXPOSE 8082
 
 RUN useradd -u 8877 ruby-www
 USER ruby-www
 
-CMD ["ruby", "app.rb"]
+RUN nohup sh -c 'ruby app.rb >/dev/null && ruby app2.ab>/dev/null' &

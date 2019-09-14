@@ -1,14 +1,14 @@
 require 'sinatra'
 require 'open-uri'
 
-set :port, 8081
+set :port, 8082
 
 get '/' do
-  '<html><body><h1>Ruby SSRF level 1</h1><a href="/page/?url=https://google.com">Load Google :)</a></body></html>'
+  '<html><body><h1>Ruby SSRF level 2</h1><a href="/page/?url=https://google.com">Load Google :)</a></body></html>'
 end
 
 get '/page/' do
-  if (params[:url] =~ /\|/)
+  if (params[:url] =~ /\|/ || !(params[:url] =~ /^https?\:\/\/google\.com\/?.*$/))
     "Security failed"
   else
     $url = open(params[:url]).read
