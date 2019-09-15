@@ -4,7 +4,7 @@ require 'open-uri'
 set :port, 8081
 
 get '/' do
-  '<html><body><h1>Ruby SSRF level 1</h1><a href="/page/?url=https://google.com">Load Google :)</a></body></html>'
+  '<html><body><h1>Ruby SSRF level 1</h1><p>Read the /flag</p><a href="/page/?url=https://google.com">Load Google :)</a></body></html>'
 end
 
 get '/page/' do
