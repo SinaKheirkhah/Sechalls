@@ -1,0 +1,6 @@
+run these commands in the root folder of this challenge:
+npm install
+node app.js
+
+
+#Enjoy ;)

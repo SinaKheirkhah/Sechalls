@@ -1,0 +1,17 @@
+{
+  "name": "xss-01",
+  "version": "1.0.0",
+  "description": "challenge for xss level 01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "my-dependency": "^1.0.1"
+  },
+  "devDependencies": {}
+}
