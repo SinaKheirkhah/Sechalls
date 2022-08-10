@@ -26,3 +26,6 @@ I also believe these labs can be used by anyone to help others become good with 
 |Lab 5 | [Black Tuesday](simple-ssrf/) | Medium - Hard |
 |Lab 6 | [The Reckoning](wp-docker/) | Hard |
 |Lab 7 | [The Reckoning](xxe-simple/) | Hard |
+
+
+Shout out to [Voorivex](https://github.com/voorivex)
