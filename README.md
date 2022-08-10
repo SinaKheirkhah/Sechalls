@@ -1,6 +1,6 @@
 # Sechalls
 
-<img src="images/logo.ong" width="300" height="300" alt="Logo" class="center">
+<img src="images/logo.png" width="300" height="300" alt="Logo" class="center">
 
 
 ## **About SecChalls** :mag:
